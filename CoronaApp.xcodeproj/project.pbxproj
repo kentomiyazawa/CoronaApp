@@ -13,6 +13,7 @@
 		7947423624AB878B00056D0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7947423424AB878B00056D0C /* Main.storyboard */; };
 		7947423824AB878D00056D0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7947423724AB878D00056D0C /* Assets.xcassets */; };
 		7947423B24AB878D00056D0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7947423924AB878D00056D0C /* LaunchScreen.storyboard */; };
+		7947424324AB8BCD00056D0C /* question.csv in Resources */ = {isa = PBXBuildFile; fileRef = 7947424224AB8BCD00056D0C /* question.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		7947423724AB878D00056D0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7947423A24AB878D00056D0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7947423C24AB878D00056D0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7947424224AB8BCD00056D0C /* question.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = question.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				7947423024AB878B00056D0C /* SceneDelegate.swift */,
 				7947423224AB878B00056D0C /* ViewController.swift */,
 				7947423424AB878B00056D0C /* Main.storyboard */,
+				7947424224AB8BCD00056D0C /* question.csv */,
 				7947423724AB878D00056D0C /* Assets.xcassets */,
 				7947423924AB878D00056D0C /* LaunchScreen.storyboard */,
 				7947423C24AB878D00056D0C /* Info.plist */,
@@ -127,6 +130,7 @@
 			files = (
 				7947423B24AB878D00056D0C /* LaunchScreen.storyboard in Resources */,
 				7947423824AB878D00056D0C /* Assets.xcassets in Resources */,
+				7947424324AB8BCD00056D0C /* question.csv in Resources */,
 				7947423624AB878B00056D0C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
