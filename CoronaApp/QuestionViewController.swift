@@ -23,13 +23,12 @@ class QuestionViewController: UIViewController {
     
 
     @IBAction func tapYesButton(_ sender: Any) {
-        if let resultViewController = storyboard?.instantiateViewController(withIdentifier: "result") as? ResultViewController {
-            resultViewController.applicableNumber += 1
-        }
+        questionData.userChoiceAnswerNumber = 1
         goNextQuestion()
     }
     
     @IBAction func tapNoButton(_ sender: Any) {
+        questionData.userChoiceAnswerNumber = 0
         goNextQuestion()
     }
     

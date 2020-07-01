@@ -53,7 +53,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cFK-TG-hms">
-                                <rect key="frame" x="130" y="94" width="154" height="36"/>
+                                <rect key="frame" x="107" y="94" width="200" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="P79-Pz-PFn"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -62,17 +65,17 @@
                                 <rect key="frame" x="0.0" y="140" width="414" height="150"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="XTq-o0-KE4"/>
+                                    <constraint firstAttribute="height" constant="150" id="DYi-Gz-02f"/>
                                 </constraints>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="LAB-u1-lvj">
-                                <rect key="frame" x="107" y="423" width="200" height="50"/>
+                                <rect key="frame" x="132" y="440" width="150" height="42"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="399-mV-AWL">
-                                        <rect key="frame" x="0.0" y="0.0" width="100" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="75" height="42"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="Yes"/>
                                         <connections>
@@ -80,7 +83,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KYG-KF-E5h">
-                                        <rect key="frame" x="100" y="0.0" width="100" height="50"/>
+                                        <rect key="frame" x="75" y="0.0" width="75" height="42"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="No"/>
                                         <connections>
@@ -89,23 +92,20 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="EXn-4H-53D"/>
-                                    <constraint firstAttribute="width" constant="200" id="M5e-mu-u8g"/>
+                                    <constraint firstAttribute="width" constant="150" id="WwT-A9-cmp"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="kpF-bO-GJp" firstAttribute="trailing" secondItem="cFK-TG-hms" secondAttribute="trailing" constant="130" id="5PO-NW-2rz"/>
-                            <constraint firstItem="CyD-Fn-aaP" firstAttribute="top" secondItem="cFK-TG-hms" secondAttribute="bottom" constant="10" id="FeG-t9-VfT"/>
-                            <constraint firstItem="LAB-u1-lvj" firstAttribute="centerX" secondItem="8Si-ew-pS7" secondAttribute="centerX" id="JMn-8U-PIb"/>
-                            <constraint firstItem="kpF-bO-GJp" firstAttribute="trailing" secondItem="CyD-Fn-aaP" secondAttribute="trailing" id="Lis-XO-xnW"/>
-                            <constraint firstItem="CyD-Fn-aaP" firstAttribute="centerX" secondItem="8Si-ew-pS7" secondAttribute="centerX" id="UYg-8H-FDV"/>
-                            <constraint firstItem="cFK-TG-hms" firstAttribute="centerX" secondItem="8Si-ew-pS7" secondAttribute="centerX" id="Wic-1G-qGV"/>
-                            <constraint firstItem="LAB-u1-lvj" firstAttribute="centerY" secondItem="8Si-ew-pS7" secondAttribute="centerY" id="Wmu-b2-8Dc"/>
-                            <constraint firstItem="cFK-TG-hms" firstAttribute="leading" secondItem="kpF-bO-GJp" secondAttribute="leading" constant="130" id="n55-TZ-2Jh"/>
-                            <constraint firstItem="cFK-TG-hms" firstAttribute="top" secondItem="kpF-bO-GJp" secondAttribute="top" constant="50" id="qxk-dd-cVE"/>
-                            <constraint firstItem="CyD-Fn-aaP" firstAttribute="leading" secondItem="kpF-bO-GJp" secondAttribute="leading" id="ujz-79-DTm"/>
+                            <constraint firstItem="CyD-Fn-aaP" firstAttribute="top" secondItem="cFK-TG-hms" secondAttribute="bottom" constant="10" id="17K-P8-3S2"/>
+                            <constraint firstItem="LAB-u1-lvj" firstAttribute="top" secondItem="CyD-Fn-aaP" secondAttribute="bottom" constant="150" id="81e-yh-ckd"/>
+                            <constraint firstItem="CyD-Fn-aaP" firstAttribute="trailing" secondItem="kpF-bO-GJp" secondAttribute="trailing" id="BGh-dD-yy6"/>
+                            <constraint firstItem="cFK-TG-hms" firstAttribute="centerX" secondItem="8Si-ew-pS7" secondAttribute="centerX" id="Ma6-tn-EBt"/>
+                            <constraint firstItem="LAB-u1-lvj" firstAttribute="centerX" secondItem="8Si-ew-pS7" secondAttribute="centerX" id="UOO-Pd-5QL"/>
+                            <constraint firstItem="CyD-Fn-aaP" firstAttribute="centerX" secondItem="8Si-ew-pS7" secondAttribute="centerX" id="rsO-tF-OLi"/>
+                            <constraint firstItem="CyD-Fn-aaP" firstAttribute="leading" secondItem="kpF-bO-GJp" secondAttribute="leading" id="t9H-hs-oq5"/>
+                            <constraint firstItem="cFK-TG-hms" firstAttribute="top" secondItem="kpF-bO-GJp" secondAttribute="top" constant="50" id="tOm-5Y-EcP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kpF-bO-GJp"/>
                     </view>
@@ -168,6 +168,7 @@
                     </view>
                     <connections>
                         <outlet property="applicableNumberLabel" destination="hQK-KD-J9Z" id="KyE-Ey-cNF"/>
+                        <outlet property="showConditionLabel" destination="66S-GS-XjR" id="85U-rS-Kzy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O4F-i5-9iq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
