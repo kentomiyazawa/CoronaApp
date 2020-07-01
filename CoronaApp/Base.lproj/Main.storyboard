@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Start View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CoronaApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="StartViewController" customModule="CoronaApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -19,6 +19,9 @@
                                 <rect key="frame" x="136" y="421" width="142" height="54"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <state key="normal" title="診断する"/>
+                                <connections>
+                                    <segue destination="6Ne-uY-pxW" kind="presentation" id="Deu-Sd-bX7"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="コロナ診断アプリ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tYA-Wo-5tj">
                                 <rect key="frame" x="46" y="244" width="322" height="48"/>
@@ -41,15 +44,15 @@
             </objects>
             <point key="canvasLocation" x="-307" y="159"/>
         </scene>
-        <!--View Controller-->
+        <!--Question View Controller-->
         <scene sceneID="QYj-Tr-70a">
             <objects>
-                <viewController id="6Ne-uY-pxW" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="question" modalPresentationStyle="fullScreen" id="6Ne-uY-pxW" customClass="QuestionViewController" customModule="CoronaApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8Si-ew-pS7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cFK-TG-hms">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cFK-TG-hms">
                                 <rect key="frame" x="130" y="94" width="154" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
@@ -72,11 +75,17 @@
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="Yes"/>
+                                        <connections>
+                                            <action selector="tapYesButton:" destination="6Ne-uY-pxW" eventType="touchUpInside" id="dYK-2i-l2q"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KYG-KF-E5h">
                                         <rect key="frame" x="100" y="0.0" width="100" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="No"/>
+                                        <connections>
+                                            <action selector="tapNoButton:" destination="6Ne-uY-pxW" eventType="touchUpInside" id="2nf-hf-FLM"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -100,15 +109,19 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kpF-bO-GJp"/>
                     </view>
+                    <connections>
+                        <outlet property="questionNolLabel" destination="cFK-TG-hms" id="u3x-H7-c9L"/>
+                        <outlet property="questionTextView" destination="CyD-Fn-aaP" id="sBe-NS-LUc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4U6-lN-Mn3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="385" y="155"/>
         </scene>
-        <!--View Controller-->
+        <!--Result View Controller-->
         <scene sceneID="Wzc-gY-RPC">
             <objects>
-                <viewController id="bod-sP-udh" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="result" modalPresentationStyle="fullScreen" id="bod-sP-udh" customClass="ResultViewController" customModule="CoronaApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="12S-Cf-cXe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -135,6 +148,9 @@
                                 <rect key="frame" x="115" y="546" width="184" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="もう一度やってみる"/>
+                                <connections>
+                                    <segue destination="9WW-4d-fRC" kind="unwind" unwindAction="goTitle:" id="c6G-D3-nqe"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -150,8 +166,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="x6Q-bB-7er"/>
                     </view>
+                    <connections>
+                        <outlet property="applicableNumberLabel" destination="hQK-KD-J9Z" id="KyE-Ey-cNF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O4F-i5-9iq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="9WW-4d-fRC" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1165" y="155"/>
         </scene>
